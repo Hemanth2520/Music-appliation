@@ -44,14 +44,6 @@ Edit
 
 ## 🛠️ Setup Instructions
 
-### 1. Clone the Repository
-
----bash
-git clone https://github.com/your-username/soundwave-music-app.git
-cd soundwave-music-app
-2. Setup Environment Files
-For both admin, client, and server folders, create .env files.
-/server/.env
 
 ---
 PORT=5000
@@ -63,8 +55,8 @@ CLOUDINARY_API_SECRET=your_secret
 /client/.env and /admin/.env
 
 ---
-VITE_API_URL=http://localhost:5000
-3. Install Dependencies
+VITE_API_URL=http://localhost:8080
+Install Dependencies
 Server
 cd server
 npm install
@@ -77,8 +69,7 @@ Admin
 cd ../admin
 npm install
 
-
-4. Start Development Servers
+Start Development Servers
 Server
 cd server
 nodemon server.js
