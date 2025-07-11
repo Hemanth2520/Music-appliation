@@ -9,9 +9,6 @@ import Home from './pages/Home';
 import Searchpage from './pages/Searchpage';
 import PrivateRoute from './components/PrivateRoute';
 
-import Logout from './pages/Logout'; 
-
-
 const App = () => {
   const location = useLocation();
   const hideNavbar = location.pathname === '/' || location.pathname === '/signup';
@@ -30,7 +27,6 @@ const App = () => {
           <Route path="/search" element={<PrivateRoute><Searchpage /></PrivateRoute>} />
           <Route path="/library" element={<PrivateRoute><Librarypage /></PrivateRoute>} />
           <Route path="/radio" element={<PrivateRoute><Radiopage /></PrivateRoute>} />
-          <Route path="/logout" element={<Logout />} />
 
           {/* Catch-all fallback to login */}
           <Route path="*" element={<Navigate to="/" />} />
