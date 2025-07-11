@@ -1,86 +1,110 @@
-# Music-appliation
-Musi application 
+# 🎵 Harmonify Music App
 
+A full-featured music streaming application built using the **MERN stack** (MongoDB, Express.js, React.js, Node.js). It includes admin and user functionality, music player, authentication, playlists, and more.
 
-# 🎧 SoundWave - MERN Stack Music App
+🌐 **Live Site:**
+🔗 [https://music-appliation-n795.vercel.app](https://music-appliation-n795.vercel.app)
 
-Welcome to **SoundWave**, a full-featured music streaming application built with the MERN stack. It features user and admin dashboards, authentication, playlist creation, music streaming, and much more.
+---
 
-## 📁 Folder Structure
+## 📁 Project Structure
 
-.
-├── admin/ # Admin dashboard (React)
-├── client/ # User-facing frontend (React)
-├── server/ # Backend (Node.js, Express, MongoDB)
+```
+harmonify-music-app/
+├── admin/        # Admin dashboard (React)
+├── client/       # User-facing music app frontend (React)
+├── server/       # Backend API with Express.js and MongoDB
 └── README.md
-
-yaml
-Copy
-Edit
+```
 
 ---
 
 ## 🚀 Features
 
-- 🎵 Music streaming with player controls
-- 🔐 JWT authentication (signup/login/logout)
-- 🎛️ Admin dashboard for managing songs and users
-- 🎨 Responsive UI with Tailwind CSS
-- 📂 Playlist & Library Management
-- 📻 Radio & Featured Albums
-- 🌩️ Cloudinary Integration for Music Uploads
+* 🎷 Music Player with Play/Pause, Skip, Seek, Volume control
+* 🔐 Authentication (Login, Signup)
+* 🢁 Admin Panel for managing songs/albums
+* 📂 Playlist and Like functionality
+* 🎨 Responsive UI using Tailwind CSS
+* ☁️ Media Upload with Cloudinary
+* 🔁 Real-time updates and state sync
+* 🌍 Deployed on Vercel (Frontend) and Render (Backend)
 
 ---
 
-## 🧰 Tech Stack
+## 🔧 Tech Stack
 
-- **Frontend:** React.js, Tailwind CSS, React Router, Lucide Icons
-- **Backend:** Node.js, Express.js, MongoDB, Mongoose, Multer
-- **Auth:** JWT, Bcrypt
-- **Storage:** Cloudinary
-- **Other Tools:** Zod (Validation), Dotenv, Axios
-
----
-
-## 🛠️ Setup Instructions
-
+| Layer       | Tech                              |
+| ----------- | --------------------------------- |
+| Frontend    | React, Tailwind CSS, React Router |
+| Backend     | Node.js, Express.js, MongoDB, Zod |
+| Auth        | JWT                               |
+| File Upload | Multer, Cloudinary                |
+| Deployment  | Vercel (client), Render (server)  |
 
 ---
+
+## 🛠️ Getting Started
+
+### 1. Clone the repo:
+
+```bash
+git clone https://github.com/Hemanth2520/Music-appliation.git
+cd Music-appliation
+```
+
+### 2. Install dependencies:
+
+```bash
+# For client
+cd client
+npm install
+
+# For admin
+cd ../admin
+npm install
+
+# For server
+cd ../server
+npm install
+```
+
+### 3. Environment variables:
+
+Create `.env` files for both client and server. Example for server:
+
+```env
 PORT=5000
-MONGO_URI=your_mongodb_connection_string
+MONGODB_URI=your_mongo_uri
 JWT_SECRET=your_jwt_secret
 CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_API_KEY=your_key
-CLOUDINARY_API_SECRET=your_secret
-/client/.env and /admin/.env
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+```
+
+### 4. Run locally:
+
+```bash
+# Server
+cd server
+npm run dev
+
+# Client
+cd ../client
+npm start
+
+# Admin
+cd ../admin
+npm start
+```
+
+
+
+## 🌐 Live URL
+
+> Visit the deployed version of the music app:
+
+🎷 [https://music-appliation-n795.vercel.app](https://music-appliation-n795.vercel.app)
 
 ---
-VITE_API_URL=http://localhost:8080
-Install Dependencies
-Server
-cd server
-npm install
 
-Client
-cd ../client
-npm install
-
-Admin
-cd ../admin
-npm install
-
-Start Development Servers
-Server
-cd server
-nodemon server.js
-
-Client
-cd ../client
-npm run dev
-
-Admin
-cd ../admin
-npm run dev
-
-
-💡 Make sure MongoDB is running and Cloudinary credentials are correctly configured.
