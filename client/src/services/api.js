@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create axios instance with base configuration
 const api = axios.create({
-  baseURL: 'http://localhost:8080/api', // Adjust this to match your server port
+  baseURL: 'https://music-appliation.onrender.com/api', // Adjust this to match your server port
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
