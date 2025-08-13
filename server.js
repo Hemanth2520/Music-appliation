@@ -14,27 +14,27 @@ const connectDb = require("./utils/db");
 const connectCloudinary = require("./utils/cloudinary");
 const errorMiddleware = require("./middlewares/error-middleware");
 
-// Optional: CORS options (currently not used)
-const corsOptions = {
+// ✅ Define allowed origins outside
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://localhost:4173",
+  "https://music-appliation-n795.vercel.app"
+];
+
+// ✅ CORS middleware
+app.use(cors({
   origin: (origin, callback) => {
-    const allowedOrigins = [
-      "http://localhost:5173",
-      "http://localhost:4173",
-      "https://music-appliation-n795.vercel.app/", // Replace with your deployed frontend
-    ];
-    const isAllowed = allowedOrigins.includes(origin);
-    callback(null, isAllowed ? origin : false);
+    // Allow requests with no origin (like mobile apps or curl)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      return callback(new Error("Not allowed by CORS"));
+    }
   },
   methods: "GET,POST,PUT,DELETE,PATCH,HEAD",
-  credentials: true,
-};
-
-
-app.use(cors({
-  origin: allowedOrigins,
   credentials: true
 }));
-
 
 // Middleware
 app.use(express.json());
