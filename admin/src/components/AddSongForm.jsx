@@ -36,7 +36,7 @@ export const AddSongForm = ({ onSongAdded, onClose }) => {
     formDataObj.append('audio', files.audio);
 
     try {
-      const response = await fetch(`http://localhost:8080/api/song/add`, {
+      const response = await fetch(`https://music-appliation.onrender.com/api/song/add`, {
         method: 'POST',
         body: formDataObj,
       });
