@@ -4,7 +4,7 @@ import { AddSongForm } from './components/AddSongForm';
 import { SongGrid } from './components/SongGrid';
 import { AudioPlayer } from './components/AudioPlayer';
 
-const API_BASE = 'https://music-appliation.onrender.com/api';
+const API_BASE = `https://music-appliation.onrender.com/api`;
 
 const MusicStreamingApp = () => {
   const [songs, setSongs] = useState([]);
