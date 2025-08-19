@@ -18,7 +18,8 @@ const errorMiddleware = require("./middlewares/error-middleware");
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:4173",
-  "https://music-appliation-n795.vercel.app"
+  "https://music-appliation-n795.vercel.app",
+  "https://music-appliation-md5o.vercel.app"
 ];
 
 // ✅ CORS middleware
